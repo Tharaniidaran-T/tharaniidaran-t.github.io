@@ -32,13 +32,31 @@ import {
   Unlock
 } from 'lucide-react';
 
+// Safe storage helper to prevent SecurityError crash in sandboxed iframes
+const safeStorage = {
+  getItem: (key) => {
+    try {
+      return localStorage.getItem(key);
+    } catch (e) {
+      return null;
+    }
+  },
+  setItem: (key, value) => {
+    try {
+      localStorage.setItem(key, value);
+    } catch (e) {
+      // Ignore security errors
+    }
+  }
+};
+
 export default function App() {
   const [theme, setTheme] = useState(() => {
-    const saved = localStorage.getItem('unblocked-theme');
+    const saved = safeStorage.getItem('unblocked-theme');
     return saved && ['cyborg', 'violet', 'ice', 'rose-pine', 'none'].includes(saved) ? saved : 'violet';
   });
   const [mode, setMode] = useState(() => {
-    return localStorage.getItem('unblocked-mode') || 'dark';
+    return safeStorage.getItem('unblocked-mode') || 'dark';
   });
   const [filter, setFilter] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -47,7 +65,7 @@ export default function App() {
   const [zoom, setZoom] = useState(1);
   const [favorites, setFavorites] = useState(() => {
     try {
-      const stored = localStorage.getItem('unblocked-favorites');
+      const stored = safeStorage.getItem('unblocked-favorites');
       return stored ? JSON.parse(stored) : [];
     } catch {
       return [];
@@ -55,7 +73,7 @@ export default function App() {
   });
 
   const [isPasscodeUnlocked, setIsPasscodeUnlocked] = useState(() => {
-    return localStorage.getItem('classroom-passcode-unlocked') === 'true';
+    return safeStorage.getItem('classroom-passcode-unlocked') === 'true';
   });
   const [passcode, setPasscode] = useState('');
   const [isShake, setIsShake] = useState(false);
@@ -69,7 +87,7 @@ export default function App() {
     if (nextPasscode === '5432') {
       setTimeout(() => {
         setIsPasscodeUnlocked(true);
-        localStorage.setItem('classroom-passcode-unlocked', 'true');
+        safeStorage.setItem('classroom-passcode-unlocked', 'true');
         setPasscode('');
       }, 150);
     } else if (nextPasscode.length === 4) {
@@ -107,13 +125,13 @@ export default function App() {
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
     document.documentElement.setAttribute('data-mode', mode);
-    localStorage.setItem('unblocked-theme', theme);
-    localStorage.setItem('unblocked-mode', mode);
+    safeStorage.setItem('unblocked-theme', theme);
+    safeStorage.setItem('unblocked-mode', mode);
   }, [theme, mode]);
 
   // Set LocalStorage favorites on change
   useEffect(() => {
-    localStorage.setItem('unblocked-favorites', JSON.stringify(favorites));
+    safeStorage.setItem('unblocked-favorites', JSON.stringify(favorites));
   }, [favorites]);
 
   // List of Alt links configuration
