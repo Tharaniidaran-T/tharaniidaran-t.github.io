@@ -1,13 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="./src/main.jsx"></script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unblocked Games Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="violet" data-mode="dark">
 
+  <header>
+    <div class="header-left">
+      <span class="header-title">🎮 Games Hub</span>
+      <input type="text" id="searchBox" class="search-box" placeholder="Search games...">
+    </div>
+    <div class="header-right">
+      <button id="themeToggle">🌙 Dark</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <div class="sidebar-title">Theme</div>
+      <div class="theme-selector">
+        <div class="theme-option theme-violet active" data-theme="violet" title="Violet"></div>
+        <div class="theme-option theme-cyborg" data-theme="cyborg" title="Cyborg"></div>
+        <div class="theme-option theme-ice" data-theme="ice" title="Ice"></div>
+        <div class="theme-option theme-rose" data-theme="rose-pine" title="Rose Pine"></div>
+        <div class="theme-option theme-none" data-theme="none" title="Mono"></div>
+      </div>
+
+      <div class="sidebar-title" style="margin-top:1.5rem">Categories</div>
+      <button class="filter-btn active" data-filter="all">All Games</button>
+      <button class="filter-btn" data-filter="Solo">Solo</button>
+      <button class="filter-btn" data-filter="Multiplayer">Multiplayer</button>
+      <button class="filter-btn" data-filter="Sports">Sports</button>
+      <button class="filter-btn" data-filter="Platformer">Platformer</button>
+      <button class="filter-btn" data-filter="Shooter">Shooter</button>
+      <button class="filter-btn" data-filter="Party">Party</button>
+      <button class="filter-btn" data-filter="AI">AI</button>
+      <button class="filter-btn" data-filter="Social">Social</button>
+    </div>
+
+    <div class="main-content">
+      <div id="gamesGrid" class="games-grid"></div>
+      <div id="emptyState" class="empty-state" style="display:none">No games found.</div>
+    </div>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <img id="modalImage" class="modal-image" src="" alt="">
+      <h2 id="modalTitle" class="modal-title"></h2>
+      <p id="modalDesc" class="modal-desc"></p>
+      <button id="playBtn" class="play-btn">🚀 Play Game</button>
+    </div>
+  </div>
+
+  <script src="games.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
