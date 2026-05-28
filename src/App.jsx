@@ -136,11 +136,11 @@ export default function App() {
 
   // List of Alt links configuration
   const altLinks = [
-    { name: 'Google Classroom', url: 'https://classroom.google.com' },
-    { name: 'Google Drive', url: 'https://drive.google.com' },
-    { name: 'Wolfram Alpha', url: 'https://www.wolframalpha.com' },
-    { name: 'PhET Science', url: 'https://phet.colorado.edu' },
-    { name: 'Google Docs', url: 'https://docs.google.com' }
+    { name: 'Alt Link 1', url: 'granddia3.github.io' },
+    { name: 'Alt Link 2', url: 'classroon.github.io' },
+    { name: 'Alt Link 3', url: '' },
+    { name: 'Alt Link 4', url: 'about:blank' },
+    { name: 'Alt Link 5', url: 'about:blank' }
   ];
 
   // Handle addition/removal of favorites
