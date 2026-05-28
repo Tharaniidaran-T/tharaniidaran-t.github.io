@@ -138,7 +138,7 @@ export default function App() {
   const altLinks = [
     { name: 'Alt Link 1', url: 'granddia3.github.io' },
     { name: 'Alt Link 2', url: 'classroon.github.io' },
-    { name: 'Alt Link 3', url: '' },
+    { name: 'Alt Link 3', url: 'https://infinityinstitutesucks.github.io/' },
     { name: 'Alt Link 4', url: 'about:blank' },
     { name: 'Alt Link 5', url: 'about:blank' }
   ];
