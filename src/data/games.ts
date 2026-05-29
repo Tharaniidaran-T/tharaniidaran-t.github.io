@@ -183,7 +183,7 @@ export const games: Game[] = [
     id: 'game-47',
     title: 'FIFA 11',
     description: 'yeah',
-    url: 'https://granddia2.github.io/games/clFIFA11.html',
+    url: '/clFIFA11.html',
     thumbnail: 'https://upload.wikimedia.org/wikipedia/en/f/f5/Fifa11_Game_Cover.jpg',
     category: 'solo'
   },
@@ -191,7 +191,7 @@ export const games: Game[] = [
     id: 'game-48',
     title: 'Madden 2002',
     description: 'yeah',
-    url: 'https://granddia2.github.io/games/clmaddennfl2002.html',
+    url: '/clmaddennfl2002.html',
     thumbnail: 'https://upload.wikimedia.org/wikipedia/en/a/a0/Madden_NFL_2002_Coverart.png',
     category: 'solo'
   },
@@ -199,7 +199,7 @@ export const games: Game[] = [
     id: 'game-49',
     title: 'Call of Duty 4',
     description: 'yeah',
-    url: 'https://granddia2.github.io/games/clcod4.html',
+    url: '/clcod4.html',
     thumbnail: 'https://upload.wikimedia.org/wikipedia/en/5/5f/Call_of_Duty_4_Modern_Warfare.jpg',
     category: 'solo'
   },
@@ -207,7 +207,7 @@ export const games: Game[] = [
     id: 'game-50',
     title: 'GTA Advance',
     description: 'yeah',
-    url: 'https://granddia2.github.io/games/clgrandtheftautoadvance.html',
+    url: '/clgrandtheftautoadvance.html',
     thumbnail: 'https://m.media-amazon.com/images/M/MV5BNjRhYzk1ODItYjFhNy00OGU4LWE2YjAtZTk3NmRlNDhiZTFjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
     category: 'solo'
   },
@@ -215,7 +215,7 @@ export const games: Game[] = [
     id: 'game-51',
     title: 'NFS: Most Wanted',
     description: 'yeah',
-    url: 'https://granddia2.github.io/games/clnfsmostwanted.html',
+    url: '/clnfsmostwanted.html',
     thumbnail: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1262560/capsule_616x353.jpg?t=1777484382',
     category: 'solo'
   },
@@ -231,7 +231,7 @@ export const games: Game[] = [
     id: 'game-53',
     title: 'Pokemon Platinum',
     description: 'yeah',
-    url: 'https://granddia2.github.io/games/clpokeplatinum.html',
+    url: 's/clpokeplatinum.html',
     thumbnail: 'https://upload.wikimedia.org/wikipedia/en/c/ca/Pokemon_Platinum.png',
     category: 'solo'
   },
@@ -239,7 +239,7 @@ export const games: Game[] = [
     id: 'game-54',
     title: 'Pokemon Black 2',
     description: 'yeah',
-    url: 'https://granddia2.github.io/games/clpokeblack2.html;',
+    url: '/clpokeblack2.html',
     thumbnail: 'https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_ds_22/SI_NDS_PokemonBlackAndWhite2_Black_enGB_image1600w.jpg',
     category: 'solo'
   },
@@ -247,7 +247,7 @@ export const games: Game[] = [
     id: 'game-55',
     title: 'Tomodachi Collection',
     description: 'yeah',
-    url: 'https://granddia2.github.io/games/cltomodachicollection.html;',
+    url: '/cltomodachicollection.html',
     thumbnail: 'https://i.ytimg.com/vi/H96rM_liOHo/maxresdefault.jpg',
     category: 'solo'
   },
@@ -255,7 +255,7 @@ export const games: Game[] = [
     id: 'game-56',
     title: 'Pokemon SoulSilver',
     description: 'yeah',
-    url: 'https://granddia2.github.io/games/clpokesoulsilver.html;',
+    url: '/clpokesoulsilver.html',
     thumbnail: 'https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_ds_22/SI_NDS_PokemonSoulSilver_enGB_image1600w.jpg',
     category: 'solo'
   },
